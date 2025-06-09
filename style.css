@@ -3,7 +3,15 @@
 
 body {
   margin: 0;
-  font-family: 'Outfit', Arial, sans-serif;
+/* Very slow carousel transitions for better readability */
+.carousel-item {
+  transition: transform 2.5s ease-in-out;
+}
+
+/* Make sure the carousel slide effect is very smooth */
+.carousel.slide {
+  transition: transform 2.5s ease-in-out;
+}mily: 'Outfit', Arial, sans-serif;
   text-align: center;
 }
 
@@ -132,59 +140,162 @@ body {
   word-spacing: 0.03em;
 }
 
-section {
-  padding: 0 8px;
+/* Timeline Section Styles */
+.timeline-section {
+  padding: 40px 8px;
   box-sizing: border-box;
+  background: #f7fbff;
 }
 
-section > div {
-  background: #fff; /* White background for each card */
+/* Carousel Container */
+#timelineCarousel {
+  max-width: 600px;
+  width: 95%;
+  margin: 0 auto;
+  background: transparent;
+  padding: 10px 0 40px;
+}
+
+/* Slow down carousel transitions */
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
+/* Make sure the carousel slide effect is smooth */
+.carousel.slide {
+  transition: transform 5s ease-in-out;
+}
+
+/* Timeline Card Styles */
+.timeline-card {
+  background: #fff;
   color: #222;
-  border-radius: 10px; /* Rounded corners for the card */
-  margin: 24px auto; /* Space between cards */
-  padding: 20px 12px; /* Padding inside the card */
-  box-shadow: 0 2px 10px rgba(0,0,50,0.07); /* Soft shadow for card effect */
-  max-width: 500px; /* Limit card width for readability */
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,50,0.07);
+  max-width: 450px;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-section > div h2 {
-  font-size: 1.6em; /* Slightly bigger */
-  color: #003366; /* Dark blue color */
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-card h2 {
+  font-size: 1.8em;
+  color: #003366;
   margin: 8px 0 4px 0;
   font-weight: bold;
 }
 
-/* Make images inside each card about 70% of the card's width and center them */
-section > div img {
-  width: 70%; /* Image takes up about 70% of the card's width */
-  max-width: none; /* Remove previous max-width so 70% works */
-  display: block; /* Center the image */
-  margin: 12px auto;
-  height: auto;
-  border-radius: 4px;
+.timeline-card h3 {
+  font-size: 1.2em;
+  margin: 4px 0 16px 0;
+  color: #444;
 }
 
-/* Make the ghgintel.avif image the same width and height as the other card images */
-section > div img[src*="ghgintel.avif"] {
-  width: 70%; /* Same width as other card images */
-  height: auto; /* Keep the aspect ratio like the others */
-  max-width: none;
+/* Image Styles in Timeline Cards */
+.card-img-hover {
+  position: relative;
   display: block;
-  margin: 12px auto;
-  border-radius: 4px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Make ghgintel.avif the same size and alignment as other timeline images */
-.card-img-hover img[src*="ghgintel.avif"] {
-  width: 350px;
-  height: 140px;
+.card-img-hover img {
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 6px;
   display: block;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+/* Special handling for specific images */
+.card-img-hover img[src*="ghgintel.avif"],
+.card-img-hover img[src*="rise2020.png"],
+.card-img-hover img[src*="2022.png"],
+.card-img-hover img[src*="2023.png"],
+.card-img-hover img[src*="2024.png"] {
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  opacity: 0.8;
+  background: rgba(0,51,102,0.1);
+  border-radius: 50px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background: rgba(0,51,102,0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: #003366;
+  opacity: 0.3;
+}
+
+.carousel-indicators button.active {
+  opacity: 1;
+}
+
+/* Hover Overlay Effect */
+.img-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,51,102,0.9);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.card-img-hover:hover .img-hover-overlay {
+  opacity: 1;
+}
+
+.card-img-hover:hover img {
+  transform: scale(1.03);
 }
 
 h2 {
@@ -606,6 +717,57 @@ input:focus {
 /* Ensure links are distinguishable */
 a:not(.btn):not(.nav-link) {
     text-decoration: underline;
+}
+
+/* Responsive Design for Timeline */
+@media (max-width: 768px) {
+  .timeline-card {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .card-img-hover img {
+    height: 180px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 15%;
+  }
+
+  .timeline-card h2 {
+    font-size: 1.4em;
+  }
+
+  .timeline-card h3 {
+    font-size: 1.1em;
+  }
+
+  .img-hover-overlay {
+    font-size: 0.85em;
+    padding: 15px;
+  }
+}
+
+/* RTL Support for Timeline Carousel */
+[dir="rtl"] .carousel-control-prev {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .carousel-control-next {
+  left: 0;
+  right: auto;
+}
+
+[dir="rtl"] .carousel-item-next.carousel-item-start,
+[dir="rtl"] .active.carousel-item-end {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .carousel-item-prev.carousel-item-end,
+[dir="rtl"] .active.carousel-item-start {
+  transform: translateX(100%);
 }
 
 /* Add a comment for students */

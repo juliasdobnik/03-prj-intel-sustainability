@@ -42,102 +42,144 @@
   </section>
   
   <!-- Timeline Cards Section -->
-  <section>
+  <section class="timeline-section">
+    <div id="timelineCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1968: Intel Founded"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="1" aria-label="1971: First Microprocessor"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="2" aria-label="1978: 8086 Processor"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="3" aria-label="1985: 386 Processor"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="4" aria-label="2006: Peak GHG Emissions"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="5" aria-label="2020: RISE Strategy"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="6" aria-label="2022: Net-Zero By 2040"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="7" aria-label="2023: Renewable Electricity"></button>
+        <button type="button" data-bs-target="#timelineCarousel" data-bs-slide-to="8" aria-label="2024: Sustainability Summit"></button>
+      </div>
 
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <span class="card-img-hover">
-        <img src="img/1.jpg" alt="Intel founders Robert Noyce and Gordon Moore in the early days of Intel" />
-        <span class="img-hover-overlay" role="tooltip">Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.</span>
-      </span>
-    </div>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <!-- Card 1: 1968 -->
+        <div class="carousel-item active">
+          <div class="timeline-card">
+            <h2>1968</h2>
+            <h3>Intel Founded</h3>
+            <span class="card-img-hover">
+              <img src="img/1.jpg" alt="Intel founders Robert Noyce and Gordon Moore in the early days of Intel" />
+              <span class="img-hover-overlay" role="tooltip">Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <span class="card-img-hover">
-        <img src="img/2.jpg" alt="The Intel 4004, world's first commercial microprocessor" />
-        <span class="img-hover-overlay" role="tooltip">Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.</span>
-      </span>
-    </div>
+        <!-- Card 2: 1971 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>1971</h2>
+            <h3>First Microprocessor</h3>
+            <span class="card-img-hover">
+              <img src="img/2.jpg" alt="The Intel 4004, world's first commercial microprocessor" />
+              <span class="img-hover-overlay" role="tooltip">Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <span class="card-img-hover">
-        <img src="img/3.jpg" alt="Intel 8086 processor that established x86 architecture" />
-        <span class="img-hover-overlay" role="tooltip">Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.</span>
-      </span>
-    </div>
+        <!-- Card 3: 1978 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>1978</h2>
+            <h3>8086 Processor</h3>
+            <span class="card-img-hover">
+              <img src="img/3.jpg" alt="Intel 8086 processor that established x86 architecture" />
+              <span class="img-hover-overlay" role="tooltip">Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <span class="card-img-hover">
-        <img src="img/4.jpg" alt="Intel 386 processor with 32-bit architecture" />
-        <span class="img-hover-overlay" role="tooltip">Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.</span>
-      </span>
-    </div>
+        <!-- Card 4: 1985 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>1985</h2>
+            <h3>386 Processor</h3>
+            <span class="card-img-hover">
+              <img src="img/4.jpg" alt="Intel 386 processor with 32-bit architecture" />
+              <span class="img-hover-overlay" role="tooltip">Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <span class="card-img-hover">
-        <img src="img/ghgintel.avif" alt="Graph showing Intel's peak greenhouse gas emissions in 2006" />
-        <span class="img-hover-overlay">This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.</span>
-      </span>
-    </div>
+        <!-- Card 5: 2006 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>2006</h2>
+            <h3>Peak GHG Emissions</h3>
+            <span class="card-img-hover">
+              <img src="img/ghgintel.avif" alt="Graph showing Intel's peak greenhouse gas emissions in 2006" />
+              <span class="img-hover-overlay" role="tooltip">This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <span class="card-img-hover">
-        <img src="img/rise2020.png" alt="Intel's RISE strategy 2030 goals infographic" />
-        <span class="img-hover-overlay" role="tooltip">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</span>
-      </span>
-    </div>
+        <!-- Card 6: 2020 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>2020</h2>
+            <h3>RISE Strategy</h3>
+            <span class="card-img-hover">
+              <img src="img/rise2020.png" alt="Intel's RISE strategy 2030 goals infographic" />
+              <span class="img-hover-overlay" role="tooltip">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <!-- The image below uses the same hover effect and sizing as other timeline images -->
-      <span class="card-img-hover">
-        <img src="img/2022.png" alt="Intel's commitment to net-zero emissions by 2040 announcement" />
-        <span class="img-hover-overlay" role="tooltip">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</span>
-      </span>
-    </div>
+        <!-- Card 7: 2022 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>2022</h2>
+            <h3>Net-Zero By 2040</h3>
+            <span class="card-img-hover">
+              <img src="img/2022.png" alt="Intel's commitment to net-zero emissions by 2040 announcement" />
+              <span class="img-hover-overlay" role="tooltip">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <!-- The image below uses the same hover effect and sizing as other timeline images -->
-      <span class="card-img-hover">
-        <img src="img/2023.png" alt="Intel achieves 99% renewable electricity worldwide milestone" />
-        <span class="img-hover-overlay" role="tooltip">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</span>
-      </span>
-    </div>
+        <!-- Card 8: 2023 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>2023</h2>
+            <h3>Renewable Electricity</h3>
+            <span class="card-img-hover">
+              <img src="img/2023.png" alt="Intel achieves 99% renewable electricity worldwide milestone" />
+              <span class="img-hover-overlay" role="tooltip">The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <!-- The image below uses the same hover effect and sizing as other timeline images -->
-      <span class="card-img-hover">
-        <img src="img/2024.png" alt="First Intel Sustainability Summit with industry leaders" />
-        <span class="img-hover-overlay">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</span>
-      </span>
+        <!-- Card 9: 2024 -->
+        <div class="carousel-item">
+          <div class="timeline-card">
+            <h2>2024</h2>
+            <h3>Sustainability Summit</h3>
+            <span class="card-img-hover">
+              <img src="img/2024.png" alt="First Intel Sustainability Summit with industry leaders" />
+              <span class="img-hover-overlay" role="tooltip">Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#timelineCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#timelineCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+  <p class="text-center mt-3">Use arrows or indicators to navigate the timeline</p>
 
   <!-- Three Column Feature Section -->
   <section class="feature-section">
@@ -240,6 +282,32 @@
   <!-- Bootstrap and Google Translate Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript">
+    // Initialize timeline carousel with accessibility features
+    document.addEventListener('DOMContentLoaded', function() {
+      const timelineCarousel = document.getElementById('timelineCarousel');
+      const carousel = new bootstrap.Carousel(timelineCarousel, {
+        interval: 5000, // Pause for 5 seconds on each slide
+        keyboard: true, // Enable keyboard navigation
+        pause: 'hover', // Pause on mouse enter
+        ride: 'carousel' // Enable automatic sliding
+      });
+
+      // Add keyboard navigation support
+      timelineCarousel.addEventListener('keydown', function(event) {
+        switch(event.key) {
+          case 'ArrowLeft':
+            carousel.prev();
+            break;
+          case 'ArrowRight':
+            carousel.next();
+            break;
+        }
+      });
+
+      // Ensure the carousel is focusable
+      timelineCarousel.setAttribute('tabindex', '0');
+    });
+
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
